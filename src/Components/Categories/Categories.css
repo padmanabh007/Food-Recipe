@@ -1,0 +1,43 @@
+
+.header{
+    text-align: center;
+    padding-bottom: 50px;
+}
+
+.buttons{
+    padding-left: 10px;
+    overflow-x: scroll;
+    overflow-y: hidden;
+}
+.buttons::-webkit-scrollbar{
+    display: none;
+}
+
+
+.button{
+    color:white;
+    outline: none;
+    border: none;
+    font-weight: 700;
+    border-radius: 5px;
+    padding: 1.42rem;
+    background-color: aqua;
+    cursor: pointer;
+    margin-right: 1rem;
+}
+.row{
+    display: flex;
+    padding: 20px;
+    overflow-x: scroll;
+    overflow-y: hidden;
+}
+
+.row::-webkit-scrollbar{
+    display: none;
+}
+
+.poster{
+    cursor: pointer;
+    max-height: 250px;
+    margin-right: 10px;
+}
