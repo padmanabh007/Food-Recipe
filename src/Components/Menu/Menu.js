@@ -1,5 +1,5 @@
 import './Menu.css'
-import axios from 'axios'
+import Axios from '../../Axios'
 import { useState, useEffect, createContext} from 'react';
 import Details from '../Details/Details';
 
@@ -13,10 +13,10 @@ function Menu(props){
     
 
     useEffect(()=> {
-        axios.get(`https://www.themealdb.com/api/json/v1/1/filter.php?c=${props.category}`).then(responses=>setMenu(responses.data.meals))
-    },[])
+        Axios.get(`filter.php?c=${props.category}`).then(responses=>setMenu(responses.data.meals))
+    },[props.category])
     const getIngrediatsandMaking = (k)=>{
-        axios.get(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${k}`).then(response => setDetail([response.data.meals,true]) )
+        Axios.get(`lookup.php?i=${k}`).then(response => setDetail([response.data.meals,true]) )
     }
 
 
